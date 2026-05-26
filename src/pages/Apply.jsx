@@ -1,13 +1,7 @@
 import { useState } from "react"
 function Apply() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    age: "",
-    gender: "",
-    city: "",
-    about:""
+    firstName: "",  lastName: "",  email: "", age: "", gender: "", city: "", about:""
   })
 
   function handleChange(event) {
@@ -35,24 +29,14 @@ function Apply() {
           <label className="form-label">
             First Name
           </label>
-          <input
-            type="text"
-            className="form-control"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
+          <input type="text" className="form-control" name="firstName" value={formData.firstName} onChange={handleChange}/>
         </div>
         <div className="mb-3">
           <label className="form-label">
             Last Name
           </label>
           <input
-            type="text"
-            className="form-control"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
+            type="text" className="form-control" name="lastName" value={formData.lastName} onChange={handleChange}
           />
         </div>
         <div className="mb-3">
@@ -60,11 +44,7 @@ function Apply() {
             Email
           </label>
           <input
-            type="email"
-            className="form-control"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
+            type="email" className="form-control" name="email" value={formData.email} onChange={handleChange}
           />
         </div>
 <div className="mb-3">
@@ -97,51 +77,29 @@ function Apply() {
     Gender
   </label>
 
-  <input
-    type="radio"
-    name="gender"
-    value="Male"
-    onChange={handleChange}
-  /> Male
-
-  <input
-    type="radio"
-    name="gender"
-    value="Female"
-    className="ms-3"
-    onChange={handleChange}
-  /> Female
-
+  <input type="radio" name="gender" value="Male" onChange={handleChange} /> Male
+  <input type="radio" name="gender" value="Female" className="ms-3" onChange={handleChange} /> Female
 </div>
-
 <div className="mb-3">
-
   <label className="form-label">
     City
   </label>
-
   <select
     className="form-select"
     name="city"
     value={formData.city}
     onChange={handleChange}
   >
-
     <option value="">Select City</option>
     <option value="Beirut">Beirut</option>
     <option value="Tripoli">Tripoli</option>
     <option value="Saida">Saida</option>
-
   </select>
-
 </div>
-
 <div className="mb-3">
-
   <label className="form-label">
     About Yourself
   </label>
-
   <textarea
     className="form-control"
     rows="4"
@@ -149,9 +107,7 @@ function Apply() {
     value={formData.about}
     onChange={handleChange}
   ></textarea>
-
 </div>
-
         <button className="btn btn-primary">
           Submit
         </button>
